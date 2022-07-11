@@ -2,5 +2,8 @@
 
 <?php
 
-echo "php bin/brain-games.php\n";
-echo "Welcome to the Brain Games!\n";
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function Brain\Games\Cli\welcome; 
+
+welcome();
