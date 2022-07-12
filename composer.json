@@ -1,7 +1,7 @@
 {
     "name": "hexlet/code",
     "autoload": {
-        "files": ["src/Engine.php", "src/Cli.php"]
+        "files": ["src/Engine.php", "src/Cli.php", "src/Games/calc.php", "src/Games/even.php", "src/Games/nod.php"]
     },
     "authors": [
         {
@@ -23,6 +23,7 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ]
 }
