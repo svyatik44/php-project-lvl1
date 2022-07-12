@@ -5,7 +5,7 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function randSymbol($str):string
+function randSymbol($str): string
 {
     $choice = $str;
     $size = strlen( $choice ); 
@@ -14,7 +14,7 @@ function randSymbol($str):string
 }
 
 
-function countAns($firstNumber, $secondNumber, $choice)
+function countAns($firstNumber, $secondNumber, $choice): int
 {
     $correctAns = 0;
     
@@ -37,7 +37,7 @@ function countAns($firstNumber, $secondNumber, $choice)
 
 
 
-function calc()
+function calc(): void
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
@@ -59,6 +59,41 @@ function calc()
         } else {
             print_r("{$ans} is wrong answer ;(. Correct answer was '{$correctAnswer}'.\n");
             break;
+        }
+        if ($i == 2) {
+            printf("Congratulations, %s\n", $name);
+        }
+    }
+}
+
+
+
+function gameEven(): void
+{
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+
+    line("Answer \"yes\" if the number is even, otherwise answer \"no\"");
+    for ($i=0; $i < 3; $i++) { 
+        $numb = rand(0, 15);
+        line("Question: " . $numb);
+        $ans = prompt('Your answer');
+        
+        if ($numb % 2 === 0) {
+            if ($ans === "yes") {
+                echo "Correct!\n";
+            } else {
+                print_r("{$ans} is wrong answer ;(. Correct answer was 'yes'.\n");
+                break;
+            }
+        } else {
+            if ($ans === "no") {
+                echo "Correct!\n";
+            } else {
+                print_r("{$ans} is wrong answer ;(. Correct answer was 'no'.\n");
+                break;
+            }
         }
         if ($i == 2) {
             printf("Congratulations, %s\n", $name);

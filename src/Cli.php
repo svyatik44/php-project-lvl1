@@ -24,7 +24,7 @@ use function cli\prompt;
  *
  * @return void An array of menu items
  */
-function welcome()
+function welcome(): void
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
