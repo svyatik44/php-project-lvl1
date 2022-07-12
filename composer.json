@@ -1,7 +1,7 @@
 {
     "name": "hexlet/code",
     "autoload": {
-        "files": ["src/Cli.php"]
+        "files": ["src/Engine.php", "src/Cli.php"]
     },
     "authors": [
         {

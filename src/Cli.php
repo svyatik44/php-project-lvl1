@@ -6,7 +6,7 @@
  * PHP version 8
  *
  * @category Cli
- * @package  WordPress_Custom_Fields_Permalink
+ * @package  What
  * @author   Display Name <svyat.2807@gmail.com>
  * @license  https://github.com/svyatik44/ svyatik44
  * @link     https://github.com/svyatik44/
