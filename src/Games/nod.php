@@ -6,13 +6,12 @@ namespace Brain\Games\Games\Nod;
 use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\getNodForTwoNumbers;
+use function Brain\Games\Cli\welcome;
 
 function gameNod()
 {
-    line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-
+    welcome($name);
     line("Find the greatest common divisor of given numbers.");
 
     for ($i=0; $i < 3; $i++) { 
@@ -27,7 +26,6 @@ function gameNod()
             print_r("{$ans} is wrong answer ;(. Correct answer was '{$rightAns}'.\n");
             break;
         }
-
         if ($i == 2) {
             printf("Congratulations, %s\n", $name);
         }

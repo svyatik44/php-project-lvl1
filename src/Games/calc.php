@@ -2,6 +2,7 @@
 
 namespace Brain\Games\Games\Calc;
 
+use function Brain\Games\Cli\welcome;
 use function Brain\Games\Engine\randSymbol;
 use function Brain\Games\Engine\countAns;
 use function cli\line;
@@ -10,9 +11,8 @@ use function cli\prompt;
 
 function calc(): void
 {
-    line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    welcome($name);
 
     line("What is the result of the expression?");
     

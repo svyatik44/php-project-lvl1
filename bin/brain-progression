@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function Brain\Games\Games\Progression\progression;
+use function Brain\Games\Games\Progression\genNumbersForProgression;
+
+//genNumbersForProgression();
+progression();
