@@ -6,6 +6,17 @@ use function cli\line;
 use function cli\prompt;
 
 
+function isPrime($num)
+{
+    $flag = true;
+	for ($i = 2; $i < $num; $i++) {
+		if ($num % $i === 0) {
+			$flag = false; // если хотя бы один раз поделилось
+		}
+	}
+    
+    return $flag;
+}
 
 function randSymbol($str): string
 {

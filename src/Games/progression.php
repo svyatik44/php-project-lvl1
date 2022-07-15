@@ -26,7 +26,8 @@ function genNumbersForProgression($start, $step, $missingNum)
     return implode(' ', $result);
 }
 
-function rightAns($start, $step, $missingNum){
+function rightAns($start, $step, $missingNum)
+{
     $len = 10;
     $iter2 = 0;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\Games\Nod;
+namespace Brain\Games\Nod;
 
 
 use function cli\line;

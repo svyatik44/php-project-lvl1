@@ -1,7 +1,7 @@
 {
     "name": "hexlet/code",
     "autoload": {
-        "files": ["src/Engine.php", "src/Cli.php", "src/Games/calc.php", "src/Games/even.php", "src/Games/nod.php", "src/Games/progression.php"]
+        "files": ["src/Engine.php", "src/Cli.php", "src/Games/calc.php", "src/Games/even.php", "src/Games/nod.php", "src/Games/progression.php", "src/Games/prime.php"]
     },
     "authors": [
         {
@@ -25,6 +25,7 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ]
 }

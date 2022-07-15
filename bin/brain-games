@@ -5,5 +5,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use function Brain\Games\Cli\welcome; 
+use function cli\prompt;
 
-welcome();
+$name = prompt('May I have your name?');
+welcome($name);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\Games\Calc;
+namespace Brain\Games\Calc;
 
 use function Brain\Games\Cli\welcome;
 use function Brain\Games\Engine\randSymbol;

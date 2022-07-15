@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\Games\Even;
+namespace Brain\Games\Even;
 
 use function Brain\Games\Cli\welcome;
 use function cli\line;
