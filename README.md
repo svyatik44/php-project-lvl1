@@ -12,10 +12,16 @@ https://asciinema.org/a/PceMB47MOvWpGaxQdCLmIz8B2 - Игра "Арифметич
 
 https://asciinema.org/a/MiHKvQJofpz6urHubvFY6g7k9 = Игра "Простое ли число?"
 
-To start a game, please type one of these commands in the console:
+#### To start a game, please type one of these commands in the console:
+
 brain-games
+
 brain-even
+
 brain-calc
+
 brain-gcd
+
 brain-progression
+
 brain-prime
