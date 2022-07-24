@@ -30,7 +30,7 @@ function correctAns($numb)
 
 function prime()
 {
-    $name = prompt('May I have your name?');
+    $name = prompt('May I have your name?'); 
     welcome($name);
     
     line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
