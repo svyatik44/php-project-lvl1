@@ -2,6 +2,7 @@
 
 namespace Brain\Games\Games\Progression;
 use function Brain\Games\Cli\welcome;
+use function Brain\Games\Engine\checkAnswer;
 
 
 use function cli\line;
@@ -62,14 +63,11 @@ function progression()
 
         $rightAns = rightAns($start, $step, $missingNum);
 
-        if ($ans == $rightAns) {
-            echo "Correct!\n";
-        } else {
+        if ($ans != $rightAns) {
             print_r("{$ans} is wrong answer ;(. Correct answer was '{$rightAns}'.\n");
             break;
         }
-        if ($i == 2) {
-            printf("Congratulations, %s\n", $name);
-        }
+
+        checkAnswer($ans, $rightAns, $name, $i);
     }
 }

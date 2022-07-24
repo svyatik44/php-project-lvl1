@@ -1,7 +1,7 @@
 {
     "name": "hexlet/code",
     "autoload": {
-        "files": ["src/Engine.php", "src/Cli.php", "src/Games/calc.php", "src/Games/even.php", "src/Games/nod.php", "src/Games/progression.php", "src/Games/prime.php"]
+        "files": ["src/Engine.php", "src/Cli.php", "src/Games/ToCalc.php", "src/Games/ToEven.php", "src/Games/ToNod.php", "src/Games/ToProgression.php", "src/Games/ToPrime.php"]
     },
     "authors": [
         {
