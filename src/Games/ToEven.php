@@ -1,11 +1,8 @@
 <?php
 
 namespace Brain\Games\Even;
-use function Brain\Games\Engine\checkAnswer;
-use function Brain\Games\Cli\welcome;
-use function cli\line;
-use function cli\prompt;
 
+use function Brain\Games\Engine\runGame;
 
 function correctAns($numb)
 {
@@ -17,24 +14,22 @@ function correctAns($numb)
     return $correctAns;
 }
 
-function gameEven(): void
+
+function toEven(): void
 {
-    $name = prompt('May I have your name?');
-    welcome($name);
+    $description = "Answer 'yes' if the number is even, other answer 'no'.";
 
-    line("Answer \"yes\" if the number is even, otherwise answer \"no\"");
-    for ($i=0; $i < 3; $i++) { 
+    $getEvenData  = function () {
         $numb = rand(0, 15);
-        line("Question: " . $numb);
-        $ans = prompt('Your answer');
 
-        $rightAns = correctAns($numb);
-        
-        if ($ans != $rightAns) {
-            print_r("{$ans} is wrong answer ;(. Correct answer was '{$rightAns}'.\n");
-            break;
-        }
+        $correctAnswer = correctAns($numb);
 
-        checkAnswer($ans, $rightAns, $name, $i);
-    }
+        $gameData = [];
+        $gameData['question'] = $numb;
+        $gameData['correctAnswer'] = $correctAnswer;
+
+        return $gameData;
+    };
+
+    runGame($getEvenData , $description);
 }

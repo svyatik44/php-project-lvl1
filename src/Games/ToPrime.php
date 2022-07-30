@@ -1,10 +1,7 @@
 <?php
 
 namespace Brain\Games\Prime;
-use function Brain\Games\Engine\checkAnswer;
-use function Brain\Games\Cli\welcome;
-use function cli\line;
-use function cli\prompt;
+use function Brain\Games\Engine\runGame;
 
 function isPrime($num)
 {
@@ -18,7 +15,7 @@ function isPrime($num)
     return $flag;
 }
 
-function correctAns($numb)
+function correctAnswer($numb)
 {
     if (isPrime($numb)) {
         $correctAns = "yes";
@@ -28,26 +25,21 @@ function correctAns($numb)
     return $correctAns;
 }
 
-function prime()
+function toPrime()
 {
-    $name = prompt('May I have your name?'); 
-    welcome($name);
-    
-    line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+    $description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-
-    for ($i=0; $i < 3; $i++) { 
+    $getPrimeData = function () {
         $numb = rand(0, 100);
-        line("Question %d", $numb);
-        $ans = prompt('Your answer');
-        $rightAns = correctAns($numb);
+        $correctAnswer = correctAnswer($numb);
 
-        if ($ans != $rightAns) {
-            print_r("{$ans} is wrong answer ;(. Correct answer was '{$rightAns}'.\n");
-            break;
-        }
+        $gameData = [];
+        $gameData['question'] = $numb;
+        $gameData['correctAnswer'] = $correctAnswer;
+        return $gameData;
+    };
 
-        checkAnswer($ans, $rightAns, $name, $i);
-    }
-
+    runGame($getPrimeData, $description);
 }
+
+

@@ -2,10 +2,7 @@
 
 namespace Brain\Games\Calc;
 
-use function Brain\Games\Cli\welcome;
-use function Brain\Games\Engine\checkAnswer;
-use function cli\line;
-use function cli\prompt;
+use function Brain\Games\Engine\runGame;
 
 function countAns($firstNumber, $secondNumber, $choice): int
 {
@@ -29,7 +26,6 @@ function countAns($firstNumber, $secondNumber, $choice): int
 }
 
 
-
 function randSymbol($str): string
 {
     $choice = $str;
@@ -39,29 +35,26 @@ function randSymbol($str): string
 }
 
 
-function calc(): void
-{
-    $name = prompt('May I have your name?');
-    welcome($name);
+function toCalc(): void
+{   
+    $description = "What is the result of the expression?";
 
-    line("What is the result of the expression?");
-    
-    for ($i=0; $i < 3; $i++) { 
+    $getCalcData = function () {
         $firstNumber = rand(0, 25);
         $secondNumber = rand(0, 25); 
-
         $choice = randSymbol("*-+");
-        
-        line("Question: %d %s %d", $firstNumber, $choice, $secondNumber);
-        $ans = prompt('Your answer');
+
+        $question = "Question: {$firstNumber} {$choice} {$secondNumber}";
         $correctAnswer = countAns($firstNumber, $secondNumber, $choice);
 
-        if ($ans != $correctAnswer) {
-            print_r("{$ans} is wrong answer ;(. Correct answer was '{$correctAnswer}'.\n");
-            break;
-        }
 
-        checkAnswer($ans, $correctAnswer, $name, $i);
-    }
+        $gameData = [];
+        $gameData['question'] = $question;
+        $gameData['correctAnswer'] = $correctAnswer;
+        
+        return $gameData;
+    };
+
+    runGame($getCalcData, $description);
 }
 

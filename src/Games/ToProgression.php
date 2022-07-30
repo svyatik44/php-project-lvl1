@@ -1,12 +1,7 @@
 <?php
 
 namespace Brain\Games\Games\Progression;
-use function Brain\Games\Cli\welcome;
-use function Brain\Games\Engine\checkAnswer;
-
-
-use function cli\line;
-use function cli\prompt;
+use function Brain\Games\Engine\runGame;
 
 function genNumbersForProgression($start, $step, $missingNum)
 {
@@ -14,7 +9,7 @@ function genNumbersForProgression($start, $step, $missingNum)
     $iter2 = 0;
     
     $result = [];
-    for ($i=$start; $i < $len * $step + $start; $i = $i + $step) { 
+    for ($i = $start; $i < $len * $step + $start; $i = $i + $step) { 
         $iter2++;
 
         if ($iter2 === $missingNum) {
@@ -45,29 +40,24 @@ function rightAns($start, $step, $missingNum)
     return $result;
 }
 
-function progression()
+function toProgression()
 {
-    $name = prompt('May I have your name?');
-    welcome($name);
-    
-    line("What number is missing in the progression?"); 
+    $description = "What number is missing in the progression?";
 
-    for ($i=0; $i < 3; $i++) { 
+    $getProgressionData = function() {
         $start = rand(0, 15);
         $step = rand(1, 9);
         $missingNum = rand(1, 10);
-        
-        print_r("Question: " . genNumbersForProgression($start, $step, $missingNum) . "\n");
+    
+        $question = "Question: " . genNumbersForProgression($start, $step, $missingNum);
+        $correctAnswer = rightAns($start, $step, $missingNum);
 
-        $ans = prompt("Your answer");
+        $gameData = [];
+        $gameData['question'] = $question;
+        $gameData['correctAnswer'] = $correctAnswer;
 
-        $rightAns = rightAns($start, $step, $missingNum);
+        return $gameData;
+    };
 
-        if ($ans != $rightAns) {
-            print_r("{$ans} is wrong answer ;(. Correct answer was '{$rightAns}'.\n");
-            break;
-        }
-
-        checkAnswer($ans, $rightAns, $name, $i);
-    }
+    runGame($getProgressionData, $description);
 }
