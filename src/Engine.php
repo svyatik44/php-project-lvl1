@@ -9,7 +9,7 @@ function runGame($getGameData, $description): void
 {
     line("Welcome To The Brain Games!");
     $name = prompt('May I have your name?');
-    welcome($name);
+    line("Hello, %s!", $name);
 
     line($description);
     
@@ -17,7 +17,8 @@ function runGame($getGameData, $description): void
         $gameData = $getGameData();
         $question = $gameData['question'];
         $correctAnswer = $gameData['correctAnswer'];
-        $userAnswer = prompt("Question: {$question}");
+        line("Question: {$question}");
+        $userAnswer = prompt("Your answer");
 
         if ($userAnswer != $correctAnswer) {
             print_r("{$userAnswer} is wrong answer ;(. Correct answer was '{$correctAnswer}'.\n");

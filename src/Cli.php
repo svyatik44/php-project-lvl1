@@ -6,8 +6,9 @@ use function cli\line;
 use function cli\prompt;
 
 
-function welcome($name): void
-{
-    line('Welcome to the Brain Game!');
+function welcome(): void
+{   
+    line("Welcome To The Brain Games!");
+    $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
 }

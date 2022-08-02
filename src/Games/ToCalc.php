@@ -44,7 +44,7 @@ function toCalc(): void
         $secondNumber = rand(0, 25); 
         $choice = randSymbol("*-+");
 
-        $question = "Question: {$firstNumber} {$choice} {$secondNumber}";
+        $question = "{$firstNumber} {$choice} {$secondNumber}";
         $correctAnswer = countAns($firstNumber, $secondNumber, $choice);
 
 

@@ -49,7 +49,7 @@ function toProgression()
         $step = rand(1, 9);
         $missingNum = rand(1, 10);
     
-        $question = "Question: " . genNumbersForProgression($start, $step, $missingNum);
+        $question = genNumbersForProgression($start, $step, $missingNum);
         $correctAnswer = rightAns($start, $step, $missingNum);
 
         $gameData = [];
