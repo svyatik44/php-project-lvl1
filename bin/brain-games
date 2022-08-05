@@ -13,4 +13,4 @@ if (file_exists($autoloadPath1)) {
 
 use function cli\line;
 
-line("Welcome To The Brain Games!");
+line("/Welcome To The Brain Games!/");
