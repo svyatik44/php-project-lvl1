@@ -12,5 +12,7 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function cli\line;
+use function Brain\Games\Cli\welcome;
 
-line("/Welcome To The Brain Games!/");
+line("Welcome To The Brain Games!");
+welcome();
