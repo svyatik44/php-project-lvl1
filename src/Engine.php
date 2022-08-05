@@ -1,10 +1,33 @@
 <?php
 
+/**
+ * Command Line functions to interraction with user
+ *
+ * PHP version 7.4.3
+ *
+ * @category PHP
+ * @package  Php-project-lvl1
+ * @author   syvatik44 <svyat.2807@gmail.com>
+ * @license  https://github.com/svyatik44/php-project-lvl1
+ * @link     https://github.com/svyatik44/php-project-lvl1
+ */
+
 namespace Brain\Games\Engine;
+
 use function Brain\Games\Cli\welcome;
 use function cli\line;
 use function cli\prompt;
 
+const ROUNDS = 3;
+
+/**
+ * Function runGame
+ *
+ * @param array  $getGameData save game param to variable
+ * @param string $description save game rules
+ *
+ * @return void
+ */
 function runGame($getGameData, $description): void
 {
     line("Welcome To The Brain Games!");
@@ -12,8 +35,8 @@ function runGame($getGameData, $description): void
     line("Hello, %s!", $name);
 
     line($description);
-    
-    for ($i=0; $i < 3; $i++) {
+
+    for ($i = 0; $i < ROUNDS; $i++) {
         $gameData = $getGameData();
         $question = $gameData['question'];
         $correctAnswer = $gameData['correctAnswer'];
@@ -21,20 +44,14 @@ function runGame($getGameData, $description): void
         $userAnswer = prompt("Your answer");
 
         if ($userAnswer != $correctAnswer) {
-            print_r("{$userAnswer} is wrong answer ;(. Correct answer was '{$correctAnswer}'.\n");
+            $temp = "is wrong answer ;(. Correct answer was"; //линтер ругаеться
+            print_r("{$userAnswer} {$temp} '{$correctAnswer}'.\n");
             break;
+        } else {
+            echo "Correct!\n";
         }
-
-        checkAnswer($userAnswer, $correctAnswer, $name, $i);
-    }
-}
-
-
-function checkAnswer($ans, $rightAns, $name, $i) {
-    if ($ans == $rightAns) {
-        echo "Correct!\n";
-    } 
-    if ($i == 2) {
-        printf("Congratulations, %s\n", $name);
+        if ($i == 2) {
+            printf("Congratulations, %s\n", $name);
+        }
     }
 }

@@ -1,22 +1,43 @@
 <?php
 
+/**
+ * Command Line functions to interraction with user
+ *
+ * PHP version 7.4.3
+ *
+ * @category PHP
+ * @package  Php-project-lvl1
+ * @author   syvatik44 <svyat.2807@gmail.com>
+ * @license  https://github.com/svyatik44/php-project-lvl1
+ * @link     https://github.com/svyatik44/php-project-lvl1
+ */
+
 namespace Brain\Games\Calc;
 
 use function Brain\Games\Engine\runGame;
 
-function countAns($firstNumber, $secondNumber, $choice): int
+/**
+ * Function calculate
+ *
+ * @param int $firstNumber  first operand
+ * @param int $secondNumber second operand
+ * @param int $choice       random char +-*
+ *
+ * @return string
+ */
+function calculate($firstNumber, $secondNumber, $choice): int
 {
     $correctAns = 0;
-    
+
     switch ($choice) {
         case '*':
             $correctAns = $firstNumber * $secondNumber;
             break;
-        
+
         case '+':
             $correctAns = $firstNumber + $secondNumber;
             break;
-        
+
         case '-':
             $correctAns = $firstNumber - $secondNumber;
             break;
@@ -26,35 +47,30 @@ function countAns($firstNumber, $secondNumber, $choice): int
 }
 
 
-function randSymbol($str): string
+/**
+ * Function playCalc
+ *
+ * @return void
+ */
+function playCalc(): void
 {
-    $choice = $str;
-    $size = strlen( $choice ); 
-    $str= $choice[ rand( 0, $size - 1 ) ]; 
-    return $str; 
-}
-
-
-function toCalc(): void
-{   
     $description = "What is the result of the expression?";
 
     $getCalcData = function () {
         $firstNumber = rand(0, 25);
-        $secondNumber = rand(0, 25); 
-        $choice = randSymbol("*-+");
+        $secondNumber = rand(0, 25);
+        $choice = substr(str_shuffle("+-*"), 0, 1);
 
         $question = "{$firstNumber} {$choice} {$secondNumber}";
-        $correctAnswer = countAns($firstNumber, $secondNumber, $choice);
+        $correctAnswer = calculate($firstNumber, $secondNumber, $choice);
 
 
         $gameData = [];
         $gameData['question'] = $question;
         $gameData['correctAnswer'] = $correctAnswer;
-        
+
         return $gameData;
     };
 
     runGame($getCalcData, $description);
 }
-

@@ -11,6 +11,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function Brain\Games\Games\Progression\toProgression;
+use function Brain\Games\Progression\playProgression;
 
-toProgression();
+playProgression();

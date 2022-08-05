@@ -12,6 +12,6 @@ if (file_exists($autoloadPath1)) {
 }
 
 
-use function Brain\Games\Nod\toNod;
+use function Brain\Games\Nod\playNod;
 
-toNod();
+playNod();
