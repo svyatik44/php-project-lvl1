@@ -11,4 +11,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-print_r("/Welcome To The Brain Games!/");
+use function BrainGames\Cli\welcome;
+
+welcome();
