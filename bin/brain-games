@@ -11,14 +11,8 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-<<<<<<< HEAD
 use function cli\line;
 use function BrainGames\Cli\welcome;
 
 line("Welcome To The Brain Games!");
 welcome();
-=======
-use function BrainGames\Cli\welcome;
-
-welcome();
->>>>>>> 4cc0e0b8ebc0a4f232e64613527aa4aeb9159729
