@@ -12,7 +12,7 @@
  * @link     https://github.com/svyatik44/php-project-lvl1
  */
 
-namespace Brain\Games\Cli;
+namespace BrainGames\Cli;
 
 use function cli\line;
 use function cli\prompt;
@@ -22,7 +22,7 @@ use function cli\prompt;
  *
  * @return void
  */
-function sayWelcome(): void
+function welcome(): void
 {
     line("Welcome To The Brain Games!");
     $name = prompt('May I have your name?');
