@@ -34,11 +34,6 @@ function correctAns($numb)
 }
 
 
-/**
- * Function playEven
- *
- * @return void
- */
 function playEven(): void
 {
     $description = "Answer 'yes' if the number is even, other answer 'no'.";

@@ -37,11 +37,6 @@ function getNodForTwoNumbers($number1, $number2)
 }
 
 
-/**
- * Function playNod
- *
- * @return void
- */
 function playNod(): void
 {
     $description = "Find the greatest common divisor of given numbers.";

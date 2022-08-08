@@ -1,30 +1,9 @@
 <?php
 
-/**
- * Command Line functions to interraction with user
- *
- * PHP version 7.4.3
- *
- * @category PHP
- * @package  Php-project-lvl1
- * @author   syvatik44 <svyat.2807@gmail.com>
- * @license  https://github.com/svyatik44/php-project-lvl1
- * @link     https://github.com/svyatik44/php-project-lvl1
- */
-
 namespace Brain\Games\Calc;
 
 use function Brain\Games\Engine\runGame;
 
-/**
- * Function calculate
- *
- * @param int $firstNumber  first operand
- * @param int $secondNumber second operand
- * @param int $choice       random char +-*
- *
- * @return string
- */
 function calculate($firstNumber, $secondNumber, $choice): int
 {
     $correctAns = 0;
@@ -47,11 +26,6 @@ function calculate($firstNumber, $secondNumber, $choice): int
 }
 
 
-/**
- * Function playCalc
- *
- * @return void
- */
 function playCalc(): void
 {
     $description = "What is the result of the expression?";

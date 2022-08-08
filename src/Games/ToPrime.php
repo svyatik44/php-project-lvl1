@@ -55,12 +55,6 @@ function correctAnswer($numb)
     return $correctAns;
 }
 
-
-/**
- * Function playIsPrime
- *
- * @return void
- */
 function playIsPrime()
 {
     $description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
