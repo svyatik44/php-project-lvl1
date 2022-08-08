@@ -8,7 +8,7 @@ use function cli\prompt;
 
 const ROUNDS = 3;
 
-function runGame(object $getGameData, string $description): void
+function runGame(callable $getGameData, string $description): void
 {
     line("Welcome To The Brain Games!");
     $name = prompt('May I have your name?');

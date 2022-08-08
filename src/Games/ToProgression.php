@@ -27,7 +27,7 @@ function rightAns(int $start, int $step, int $missingNum): int
 {
     $len = 10;
     $iter2 = 0;
-
+    $result = 0;
     for ($i = $start; $i < $len * $step + $start; $i += $step) {
         $iter2++;
 
