@@ -4,7 +4,7 @@ namespace BrainGames\Even;
 
 use function BrainGames\Engine\runGame;
 
-function correctAns($numb): string
+function correctAns(int $numb): string
 {
     if ($numb % 2 === 0) {
         $correctAns = "yes";

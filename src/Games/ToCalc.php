@@ -4,7 +4,7 @@ namespace BrainGames\Calc;
 
 use function BrainGames\Engine\runGame;
 
-function calculate($firstNumber, $secondNumber, $choice): int
+function calculate(int $firstNumber, int $secondNumber, string $choice): int
 {
     $correctAns = 0;
 

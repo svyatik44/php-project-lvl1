@@ -4,7 +4,7 @@ namespace BrainGames\Nod;
 
 use function BrainGames\Engine\runGame;
 
-function getNodForTwoNumbers($number1, $number2): int
+function getNodForTwoNumbers(int $number1, int $number2): int
 {
     while ($number1 != $number2) {
         if ($number1 > $number2) {

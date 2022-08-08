@@ -4,7 +4,7 @@ namespace BrainGames\Progression;
 
 use function BrainGames\Engine\runGame;
 
-function genNumbersForProgression($start, $step, $missingNum): string
+function genNumbersForProgression(int $start, int $step, int $missingNum): string
 {
     $len = 10;
     $iter2 = 0;
@@ -23,7 +23,7 @@ function genNumbersForProgression($start, $step, $missingNum): string
     return implode(' ', $result);
 }
 
-function rightAns($start, $step, $missingNum): int
+function rightAns(int $start, int $step, int $missingNum): int
 {
     $len = 10;
     $iter2 = 0;
@@ -41,11 +41,7 @@ function rightAns($start, $step, $missingNum): int
     return $result;
 }
 
-/**
- * Function playProgression
- *
- * @return void
- */
+
 function playProgression(): void
 {
     $description = "What number is missing in the progression?";

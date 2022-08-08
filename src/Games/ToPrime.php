@@ -4,7 +4,7 @@ namespace BrainGames\Prime;
 
 use function BrainGames\Engine\runGame;
 
-function isPrime($num): bool
+function isPrime(int $num): bool
 {
     if ($num == 1) {
         return false;
@@ -19,14 +19,8 @@ function isPrime($num): bool
     return $flag;
 }
 
-/**
- * Function correctAnswer
- *
- * @param int $numb to check if it's prime
- *
- * @return string
- */
-function correctAnswer($numb): string
+
+function correctAnswer(int $numb): string
 {
     if (isPrime($numb)) {
         $correctAns = "yes";
