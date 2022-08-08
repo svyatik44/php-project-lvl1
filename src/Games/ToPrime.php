@@ -25,13 +25,14 @@ use function Brain\Games\Engine\runGame;
  */
 function isPrime($num)
 {
+    if($num == 1) return false;
+
     $flag = true;
     for ($i = 2; $i < $num; $i++) {
-        if ($num % $i === 0) {
-            $flag = false; // если хотя бы один раз поделилось
-        }
+        if (($num % $i) === 0) {
+            $flag = false;
+        } 
     }
-
     return $flag;
 }
 
@@ -63,7 +64,7 @@ function playIsPrime()
     $description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     $getPrimeData = function () {
-        $numb = rand(0, 100);
+        $numb = rand(1, 100);
         $correctAnswer = correctAnswer($numb);
 
         $gameData = [];
