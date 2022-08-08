@@ -46,6 +46,7 @@ function runGame($getGameData, $description): void
         if ($userAnswer != $correctAnswer) {
             $temp = "is wrong answer ;(. Correct answer was"; //линтер ругаеться
             print_r("{$userAnswer} {$temp} '{$correctAnswer}'.\n");
+            printf("Let's try again, %s!\n", $name);
             break;
         } else {
             echo "Correct!\n";
@@ -55,3 +56,4 @@ function runGame($getGameData, $description): void
         }
     }
 }
+    
