@@ -1,10 +1,10 @@
 <?php
 
-namespace Brain\Games\Progression;
+namespace BrainGames\Progression;
 
-use function Brain\Games\Engine\runGame;
+use function BrainGames\Engine\runGame;
 
-function genNumbersForProgression($start, $step, $missingNum)
+function genNumbersForProgression($start, $step, $missingNum): string
 {
     $len = 10;
     $iter2 = 0;
@@ -23,7 +23,7 @@ function genNumbersForProgression($start, $step, $missingNum)
     return implode(' ', $result);
 }
 
-function rightAns($start, $step, $missingNum)
+function rightAns($start, $step, $missingNum): int
 {
     $len = 10;
     $iter2 = 0;
@@ -46,7 +46,7 @@ function rightAns($start, $step, $missingNum)
  *
  * @return void
  */
-function playProgression()
+function playProgression(): void
 {
     $description = "What number is missing in the progression?";
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Brain\Games\Calc;
+namespace BrainGames\Calc;
 
-use function Brain\Games\Engine\runGame;
+use function BrainGames\Engine\runGame;
 
 function calculate($firstNumber, $secondNumber, $choice): int
 {

@@ -1,29 +1,10 @@
 <?php
 
-/**
- * Command Line functions to interraction with user
- *
- * PHP version 7.4.3
- *
- * @category PHP
- * @package  Php-project-lvl1
- * @author   syvatik44 <svyat.2807@gmail.com>
- * @license  https://github.com/svyatik44/php-project-lvl1
- * @link     https://github.com/svyatik44/php-project-lvl1
- */
+namespace BrainGames\Prime;
 
-namespace Brain\Games\Prime;
+use function BrainGames\Engine\runGame;
 
-use function Brain\Games\Engine\runGame;
-
-/**
- * Function isPrime
- *
- * @param int $num to check if it's prime
- *
- * @return bool
- */
-function isPrime($num)
+function isPrime($num): bool
 {
     if ($num == 1) {
         return false;
@@ -45,7 +26,7 @@ function isPrime($num)
  *
  * @return string
  */
-function correctAnswer($numb)
+function correctAnswer($numb): string
 {
     if (isPrime($numb)) {
         $correctAns = "yes";
@@ -55,7 +36,7 @@ function correctAnswer($numb)
     return $correctAns;
 }
 
-function playIsPrime()
+function playIsPrime(): void
 {
     $description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 

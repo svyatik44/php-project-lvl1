@@ -12,6 +12,6 @@ if (file_exists($autoloadPath1)) {
 }
 
 
-use function Brain\Games\Even\playEven;
+use function BrainGames\Even\playEven;
 
 playEven();

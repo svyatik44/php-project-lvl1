@@ -1,8 +1,8 @@
 <?php
 
-namespace Brain\Games\Engine;
+namespace BrainGames\Engine;
 
-use function Brain\Games\Cli\welcome;
+use function BrainGames\Cli\welcome;
 use function cli\line;
 use function cli\prompt;
 

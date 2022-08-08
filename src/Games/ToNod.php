@@ -1,30 +1,10 @@
 <?php
 
-/**
- * Command Line functions to interraction with user
- *
- * PHP version 7.4.3
- *
- * @category PHP
- * @package  Php-project-lvl1
- * @author   syvatik44 <svyat.2807@gmail.com>
- * @license  https://github.com/svyatik44/php-project-lvl1
- * @link     https://github.com/svyatik44/php-project-lvl1
- */
+namespace BrainGames\Nod;
 
-namespace Brain\Games\Nod;
+use function BrainGames\Engine\runGame;
 
-use function Brain\Games\Engine\runGame;
-
-/**
- * Function getNodForTwoNumbers
- *
- * @param int $number1 first number to find nod
- * @param int $number2 second number to find nod
- *
- * @return int
- */
-function getNodForTwoNumbers($number1, $number2)
+function getNodForTwoNumbers($number1, $number2): int
 {
     while ($number1 != $number2) {
         if ($number1 > $number2) {
