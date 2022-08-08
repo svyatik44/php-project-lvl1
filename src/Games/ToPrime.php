@@ -35,7 +35,6 @@ function isPrime($num)
     return $flag;
 }
 
-
 /**
  * Function correctAnswer
  *

@@ -51,7 +51,7 @@ function runGame($getGameData, $description): void
             echo "Correct!\n";
         }
         if ($i == 2) {
-            printf("Congratulations, %s\n", $name);
+            printf("Congratulations, %s!\n", $name);
         }
     }
 }
