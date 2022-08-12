@@ -4,6 +4,9 @@ namespace BrainGames\Calc;
 
 use function BrainGames\Engine\runGame;
 
+const DESCRIPTION = "What is the result of the expression?";
+const ROUNDS = 3;
+
 function calculate(int $firstNumber, int $secondNumber, string $choice): int
 {
     $correctAns = 0;
@@ -25,12 +28,10 @@ function calculate(int $firstNumber, int $secondNumber, string $choice): int
     return $correctAns;
 }
 
-
 function playCalc(): void
 {
-    $description = "What is the result of the expression?";
-
-    $getCalcData = function () {
+    $gameData = [];
+    for ($i = 0; $i < ROUNDS; $i++) {
         $firstNumber = rand(0, 25);
         $secondNumber = rand(0, 25);
         $choice = substr(str_shuffle("+-*"), 0, 1);
@@ -38,13 +39,9 @@ function playCalc(): void
         $question = "{$firstNumber} {$choice} {$secondNumber}";
         $correctAnswer = calculate($firstNumber, $secondNumber, $choice);
 
+        $gameData[] = [$question, $correctAnswer];
+    }
 
-        $gameData = [];
-        $gameData['question'] = $question;
-        $gameData['correctAnswer'] = $correctAnswer;
 
-        return $gameData;
-    };
-
-    runGame($getCalcData, $description);
+    runGame($gameData, DESCRIPTION);
 }

@@ -4,6 +4,9 @@ namespace BrainGames\Prime;
 
 use function BrainGames\Engine\runGame;
 
+const DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+const ROUNDS = 3;
+
 function isPrime(int $num): bool
 {
     if ($num == 1) {
@@ -19,30 +22,17 @@ function isPrime(int $num): bool
     return $flag;
 }
 
-
-function correctAnswer(int $numb): string
-{
-    if (isPrime($numb)) {
-        $correctAns = "yes";
-    } else {
-        $correctAns = "no";
-    }
-    return $correctAns;
-}
-
 function playIsPrime(): void
 {
-    $description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-
-    $getPrimeData = function () {
+    $gameData = [];
+    for ($i = 0; $i < ROUNDS; $i++) {
         $numb = rand(1, 100);
-        $correctAnswer = correctAnswer($numb);
 
-        $gameData = [];
-        $gameData['question'] = $numb;
-        $gameData['correctAnswer'] = $correctAnswer;
-        return $gameData;
-    };
+        $question = $numb;
+        $correctAnswer = isPrime($numb) ? "yes" : "no";
 
-    runGame($getPrimeData, $description);
+        $gameData[] = [$question, $correctAnswer];
+    }
+
+    runGame($gameData, DESCRIPTION);
 }

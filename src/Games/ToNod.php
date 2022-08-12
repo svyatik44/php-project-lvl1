@@ -4,6 +4,9 @@ namespace BrainGames\Nod;
 
 use function BrainGames\Engine\runGame;
 
+const DESCRIPTION = "Find the greatest common divisor of given numbers.";
+const ROUNDS = 3;
+
 function getNodForTwoNumbers(int $number1, int $number2): int
 {
     while ($number1 != $number2) {
@@ -16,24 +19,18 @@ function getNodForTwoNumbers(int $number1, int $number2): int
     return $number1;
 }
 
-
 function playNod(): void
 {
-    $description = "Find the greatest common divisor of given numbers.";
-
-    $getNodData  = function () {
+    $gameData = [];
+    for ($i = 0; $i < ROUNDS; $i++) {
         $numb1 = rand(1, 100);
         $numb2 = rand(1, 100);
 
         $question = "{$numb1} {$numb2}";
         $correctAnswer = getNodForTwoNumbers($numb1, $numb2);
 
-        $gameData = [];
-        $gameData['question'] = $question;
-        $gameData['correctAnswer'] = $correctAnswer;
+        $gameData[] = [$question, $correctAnswer];
+    }
 
-        return $gameData;
-    };
-
-    runGame($getNodData, $description);
+    runGame($gameData, DESCRIPTION);
 }

@@ -3,19 +3,19 @@
 [![Actions Status](https://github.com/svyatik44/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/svyatik44/php-project-lvl1/actions)
 
 ## Игра: "Проверка на чётность"
-[![asciicast](https://asciinema.org/a/EIkZ32g2u83XVLsVi16OxmNDc.svg)](https://asciinema.org/a/EIkZ32g2u83XVLsVi16OxmNDc)
+[![asciicast](https://asciinema.org/a/lepQGiQksMrlh4iKn3pNXoOYM.svg)](https://asciinema.org/a/lepQGiQksMrlh4iKn3pNXoOYM)
 
 ## Игра: "Калькулятор"
-[![asciicast](https://asciinema.org/a/Ta11EiVBp7f7PIjwx7CnFaDSI.svg)](https://asciinema.org/a/Ta11EiVBp7f7PIjwx7CnFaDSI)
+[![asciicast](https://asciinema.org/a/vVbgu5d1JfRoeUoK2P66xe5z6.svg)](https://asciinema.org/a/vVbgu5d1JfRoeUoK2P66xe5z6)
 
 ## игра "НОД"
-[![asciicast](https://asciinema.org/a/kvinoK19e4LVsNoZB0d1R5Ti7.svg)](https://asciinema.org/a/kvinoK19e4LVsNoZB0d1R5Ti7)
+[![asciicast](https://asciinema.org/a/w0LkvLImbAbSLyQv5k6pnbUJN.svg)](https://asciinema.org/a/w0LkvLImbAbSLyQv5k6pnbUJN)
 
 ## Игра "Арифметическая прогрессия"
-[![asciicast](https://asciinema.org/a/X1Dasul21hYzRK2CaaMjrF98r.svg)](https://asciinema.org/a/X1Dasul21hYzRK2CaaMjrF98r)
+[![asciicast](https://asciinema.org/a/q1v0aX9NakeJUhIVZSqfkjys9.svg)](https://asciinema.org/a/q1v0aX9NakeJUhIVZSqfkjys9)
 
 ## Игра "Простое ли число?"
-[![asciicast](https://asciinema.org/a/J7W1v785emPrUN7fUnTPFGIbq.svg)](https://asciinema.org/a/J7W1v785emPrUN7fUnTPFGIbq)
+[![asciicast](https://asciinema.org/a/jEP8G61Ra4UwjC8VFYlCeaZPL.svg)](https://asciinema.org/a/jEP8G61Ra4UwjC8VFYlCeaZPL)
 
 ## To start a game, please type one of these commands in the console:
 
