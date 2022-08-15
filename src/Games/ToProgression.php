@@ -4,9 +4,8 @@ namespace BrainGames\Progression;
 
 use function BrainGames\Engine\runGame;
 
-const ROUNDS = 3;
-
 const DESCRIPTION = "What number is missing in the progression?";
+use const BrainGames\Engine\ROUNDS;
 
 function genNumbersForProgression(int $start, int $step, int $missingNum): string
 {

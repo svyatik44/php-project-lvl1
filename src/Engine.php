@@ -5,6 +5,8 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const ROUNDS = 3;
+
 function runGame(array $gameData, string $description): void
 {
     line("Welcome To The Brain Games!");
@@ -13,7 +15,6 @@ function runGame(array $gameData, string $description): void
 
     line($description);
 
-    $i = 0;
     foreach ($gameData as [$question, $correctAnswer]) {
         line("Question: {$question}");
         $userAnswer = prompt("Your answer");
@@ -22,13 +23,10 @@ function runGame(array $gameData, string $description): void
             $temp = "is wrong answer ;(. Correct answer was"; //линтер ругаеться
             print_r("{$userAnswer} {$temp} '{$correctAnswer}'.\n");
             printf("Let's try again, %s!\n", $name);
-            break;
+            exit();
         } else {
             printf("Correct!\n");
         }
-        if ($i == 2) {
-            printf("Congratulations, %s!\n", $name);
-        }
-        $i++;
     }
+    printf("Congratulations, %s!\n", $name);
 }

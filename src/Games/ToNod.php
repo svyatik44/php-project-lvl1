@@ -5,7 +5,7 @@ namespace BrainGames\Nod;
 use function BrainGames\Engine\runGame;
 
 const DESCRIPTION = "Find the greatest common divisor of given numbers.";
-const ROUNDS = 3;
+use const BrainGames\Engine\ROUNDS;
 
 function getNodForTwoNumbers(int $number1, int $number2): int
 {

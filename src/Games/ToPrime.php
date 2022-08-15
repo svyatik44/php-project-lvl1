@@ -5,7 +5,7 @@ namespace BrainGames\Prime;
 use function BrainGames\Engine\runGame;
 
 const DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-const ROUNDS = 3;
+use const BrainGames\Engine\ROUNDS;
 
 function isPrime(int $num): bool
 {

@@ -5,7 +5,7 @@ namespace BrainGames\Calc;
 use function BrainGames\Engine\runGame;
 
 const DESCRIPTION = "What is the result of the expression?";
-const ROUNDS = 3;
+use const BrainGames\Engine\ROUNDS;
 
 function calculate(int $firstNumber, int $secondNumber, string $choice): int
 {
@@ -15,11 +15,9 @@ function calculate(int $firstNumber, int $secondNumber, string $choice): int
         case '*':
             $correctAns = $firstNumber * $secondNumber;
             break;
-
         case '+':
             $correctAns = $firstNumber + $secondNumber;
             break;
-
         case '-':
             $correctAns = $firstNumber - $secondNumber;
             break;
